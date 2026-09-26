@@ -1,23 +1,74 @@
 aid: asiayo
+
 name: Asiayo
-description: 'Asiayo is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://img.asiayo.com/static/images/fb_og.jpg
+
+description: AsiaYo is a global travel platform offering bookings for hotels, tours, sports activities, and transportation. It provides a marketplace
+  for travelers to discover and reserve accommodations, group tours, cruises, and day trips worldwide, with multilingual support and member discounts.
+
 url: https://raw.githubusercontent.com/api-evangelist/asiayo/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- Travel
+- Marketplace
+- Booking
+- Tours
+- Hospitality
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/asiayo-llms.txt
+- type: Hosts
+  url: hosts/asiayo-hosts.yml
+- type: TermsOfService
+  url: https://asiayo.com/en-us/terms
+- type: PrivacyPolicy
+  url: https://asiayo.com/en-us/privacy-policy
+- type: Blog
+  url: https://blog.asiayo.com/
+- type: DomainSecurity
+  url: security/asiayo-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/asiayo
+  url: https://asiayo.com
+
+apis:
+- name: AsiaYo API
+  description: Travel booking API documented on the sandbox portal
+  humanURL: https://sandbox.asiayo.com/en-us/
+  baseURL: null
+  aid: asiayo:asiayo-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Sandbox portal renders with JavaScript and provides no machine‑readable OpenAPI spec.
+  evidence:
+  - url: https://sandbox.asiayo.com/en-us/
+    status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

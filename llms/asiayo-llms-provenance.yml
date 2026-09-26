@@ -1,0 +1,6 @@
+generated: '2026-09-26'
+method: probed
+generator: harvest-llms.py
+source: https://blog.asiayo.com/llms.txt
+bytes: 451501
+note: saved verbatim; the provider's own document
