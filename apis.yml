@@ -20,7 +20,7 @@ specificationVersion: '0.20'
 
 created: '2026-09-26'
 
-modified: '2026-09-26'
+modified: '2026-10-06'
 
 tags:
 - Travel
@@ -36,6 +36,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- url: https://blog.asiayo.com/feed/
+  type: BlogRSS
 - type: LLMsTxt
   url: llms/asiayo-llms.txt
 - type: Hosts
